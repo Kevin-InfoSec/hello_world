@@ -1,13 +1,13 @@
-def TakeInput(InVal): #I'm too lazy to copy/paste print 'enter your val' input() value so I made a funtion!
+def TakeInput(InVal): #Demonstrating a basic function, taking input
     return(input('Please enter your ' + InVal + ' value '))
     
-def LoopEx(): #Test the three different syntaxes for for loops (1,2, or 3 integers passed)
+def LoopEx(): #Demontrate for and while loops iterating through themselves
     print('What type of loop would you like to test')
     LoopType = input().lower()
     while LoopType != 'while' and LoopType != 'for':
         LoopType = input('Please enter your loop type (while OR for) ').lower()
     if LoopType == 'for':
-        print('How many values in your FOR Loop?')
+        print('How many values in your FOR Loop? You can have 1 to 3 arguments passed to a for loop. Each works slightly differently')
         Val = int(input())
         while Val <1 or Val >3:
               print('Please enter a valid i value')
