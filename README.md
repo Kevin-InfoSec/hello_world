@@ -8,3 +8,5 @@ Projects
   Lists.py demonstrates a basic list defined by the user
   
   mutableLists.py demonstrates the difference between assignment and copy with mutable variables
+
+  Dictionaries.py demonstrates simple dictionary functionality
