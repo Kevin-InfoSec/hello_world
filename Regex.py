@@ -42,24 +42,38 @@ print('While the search() method returns the first match, the findall() method r
 print('Note: the findall() method will return each group match if groups are used, not the direct match')
 print("phoneNumRegex.findall('I can be reached at p:123-456-7890 or c: 234-567-8901')")
 print(phoneNumRegex.findall('I can be reached at p:123-456-7890 or c:234-567-8901'))    
-print("Now let's try the same thing withphoneNumRegex = re.compile(r'\(?\d{3}\)?[- ]\d{3}-\d{4}')")     
+print('''We can fix this by puting the whole value into group 0
+phoneNumRegex = re.compile(r'(\(?(\d{3})\)?[- ](\d{3}-\d{4}))')''')
+phoneNumRegex = re.compile(r'(\(?(\d{3})\)?[- ](\d{3}-\d{4}))')
+print('Now the first group will always be the whole value of the regex match')
+print(phoneNumRegex.findall('I can be reached at p:123-456-7890 or c:234-567-8901'))
+print('Now we can loop through the touples and only return group0 to a new list')
+allPhoneNumbers = []
+print('for phoneNumber in phoneNumRegex.findall(x...y)')
+print('\tallPhoneNumbers.append(phoneNumber[0]')
+for phoneNumber in phoneNumRegex.findall('I can be reached at p:123-456-7890 or c:234-567-8901'):
+   allPhoneNumbers.append(phoneNumber[0])
+print(allPhoneNumbers)
+print("Now let's try the same thing without groups - phoneNumRegex = re.compile(r'\(?\d{3}\)?[- ]\d{3}-\d{4}')")     
 phoneNumRegex = re.compile(r'\(?\d{3}\)?[- ]\d{3}-\d{4}')
 print(phoneNumRegex.findall('I can be reached at p:123-456-7890 or c:234-567-8901'))
 input('Press enter key to continue')
 print('\n\n\n')
 print("We can use the reg.sub() method to find/replace, or substitute values")
-print("That syntax is regex.sub('replaceWithThis', 'inThis")
+print("That syntax is regex.sub('replaceWithThis', 'inThis')")
 print("i.e. phoneNumRegex.sub('PRIVATE', 'I can be reached at p:123-456-7890 or c:234-567-8901')")
 print(phoneNumRegex.sub('PRIVATE', 'I can be reached at p:123-456-7890 or c:234-567-8901'))
 print("We can also substitute groups using the \group#")
-print("i.e. phoneNumReges.sub(r'Area Code: \\1 Local Number: \\2', 'Phone Number: 123-456-7890')")
+print("i.e. phoneNumReges.sub(r'Area Code: \\1 Local Number: \\2', 'My number is 123-456-7890')")
 phoneNumRegex = re.compile(r'\(?(\d{3})\)?[- ](\d{3}-\d{4})')
-print(phoneNumRegex.sub(r'Area Code: \1 Local Number: \2', 'Phone Number: 123-456-7890'))
+print(phoneNumRegex.sub(r'Area Code: \1 Local Number: \2', 'My number is 123-456-7890'))
 input('Press enter key to continue')
 print('\n\n\n')
 print('The regex.compile() function can be passed a second argument')
-print('''e.g. regex.compile(r'regexToMatch', re.I) is case insensitive
+print('''e.g.
+regex.compile(r'regexToMatch', re.I) is case insensitive
 regex.compile(r'regexToMatch', re.DOTALL) means the special character . will match newlines
 regex.compile(r'regexToMatch', re.VERBOSE) ignores whitespace and comments for cleaner code
+
 We can pass multiple arguments with the bitwise OR operator '|'
 ie. regex.compile(r'regexToMatch', re.VERBOSE | re.DOTALL)''')
