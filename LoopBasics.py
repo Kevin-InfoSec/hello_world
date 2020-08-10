@@ -127,4 +127,8 @@ def LoopEx(): #Demontrate for and while loops iterating through themselves
 
 if __name__ == '__main__':
     LoopEx() # You can call this as many times as you like for testing purposes
-
+    runAgain = ''
+    while runAgain != 'quit':
+        runAgain = input('Type "quit" to quit or anything else to run through another loop \n')
+        if runAgain != 'quit':
+           LoopEx()
