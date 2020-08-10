@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 print('Dictionaries are UNORDERED and MUTABLE key/value pairs.')
 print('The syntax for a dictionary is dictionary = {key1:value1,key2:value2,...keyX:valueX}')
 print('Let us define a new dictionary for our cats attributes')

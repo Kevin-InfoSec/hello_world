@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 name = input('Hello what is your name? ')
 print('Hello ' + name + ' we are learning lists today!')
 item = '0'

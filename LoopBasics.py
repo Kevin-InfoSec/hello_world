@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def TakeInput(InVal): #Demonstrating a basic function, taking input
     return(input('Please enter your ' + InVal + ' value '))
     
@@ -123,5 +124,7 @@ def LoopEx(): #Demontrate for and while loops iterating through themselves
             print('You broke my program! ' + comparator + ' is not a valid comparator!')
     else:
         print('How did you break my input validation?')
-LoopEx() # You can call this as many times as you like for testing purposes
+
+if __name__ == '__main__':
+    LoopEx() # You can call this as many times as you like for testing purposes
 

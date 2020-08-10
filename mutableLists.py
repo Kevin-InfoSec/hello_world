@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #Understanding mutable values using lists
 import copy
 def iterateThroughList(whichList):
@@ -16,6 +17,7 @@ print('Now let us check myList')
 iterateThroughList(myList)
 print('Even though we modified newList, myList is also changed')
 print('Now let us use the copy.deepcopy function instead')
+print('newList = copy.deepcopy(myList)')
 newList = copy.deepcopy(myList)
 print('Now newList has a new location in memory containing a copy of myList')
 print('This means we can modify newList without effecting myList')
