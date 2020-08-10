@@ -12,12 +12,12 @@ print("'pixel' in newDict")
 print('pixel' in newDict)
 print("\n\n We can call values with newDict[key]")
 print('However, if we use a key not present it will throw an error')
-print('We can avoid this using the get function, systax newDict.get(key, valueToReturnIfKeyNotPresent')
+print('We can avoid this using the get function, systax newDict.get(key, valueToReturnIfKeyNotPresent)')
 print("Example: newDict.get('name', '')")
 print(newDict.get('name', ''))
 print("Example: newDict.get('age', '0')")
 print(newDict.get('age', '0'))
-print('This is particulaly useful for non-static list')
+print('This is particulaly useful for non-static lists')
 partySupplies = ''
 supplyQuantity = '0'
 partyDict = {}
