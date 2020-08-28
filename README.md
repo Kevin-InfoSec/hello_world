@@ -1,5 +1,7 @@
 # hello_world
 Learning projects and examples
+Developed based on Automate the Boring Stuff with Python by Al Sweigart
+https://www.udemy.com/course/automate/
 
 Projects 
 
